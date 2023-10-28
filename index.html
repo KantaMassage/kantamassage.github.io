@@ -150,7 +150,7 @@
 		Het mooie is dat u bij deze massage niet hoeft te betalen voor dure medische woorden, maar voor een zeer werkzame methode die zich al die duizenden jaren bewezen heeft, en misschien juist daarom gewoon is gebleven.
 		<h4 class="w4-left">Uw wensen</h4>
 		Bij Kanta-massage kiezen we ervoor om in overleg met u de massage vorm te geven. U kunt bijvoorbeeld aangeven welke delen van uw lichaam extra aandacht behoeven. Met drukpuntmassage volgens de oude Thaise methode worden de juiste energiebanen in uw lichaam gestimuleerd, en uw lichaam en geest weer meer in balans gebracht. 
-		Misschien heeft u specifieke wensen, zoals de behandeling van een bevroren schouder of een stijve nek. Wij kunnen er speciale aandacht aan geven, zodat de klachten verminderen en de pijn verlicht wordt. <br/> 
+		Misschien heeft u specifieke wensen, zoals de behandeling van een "bevroren schouder" of een stijve nek. Wij kunnen er speciale aandacht aan geven, zodat de klachten verminderen en de pijn verlicht wordt. <br/> 
 		Onze benadering is dus vooral medisch en op uw gezondheid gericht. Daar hoort ook ontspanningsmassage bij, maar erotiek past zeker niet in onze werkwijze. Wij vragen u respectvol om voor een erotische massage verder te zoeken en geen contact met ons op te nemen.
 		</p>
         <div class="w3-row">
@@ -352,6 +352,12 @@
 	   <dt> Kruidenstempel Massage € 15,- </dt>
 	   	  Hotstone en Kruidenstempel massage <br/> hebben een minimale duur van anderhalf uur.
 	  </dl>
+    <button onclick="toggleAccordion('Cadeaubon')" class="w3-btn w3-block w3-khaki w3-center"><h3>Ook een cadeaubon is mogelijk...</h3></button>
+		<div id="Cadeaubon" class="w3-container w3-hide">
+			<h4>Cadeaubon</h4>
+			<p>Te koop in de praktijk. U kiest zelf het aantal uren en voor wie de cadeaubon bedoeld is.</p>
+			<img src="CadeaubonVoorkant.png" alt="cadeaubon"></img>
+		</div>
 
       <!--  <div class="w3-quarter w3-section">
             <span class="w3-xlarge">14+</span><br>
@@ -474,6 +480,17 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
+				
+				// Accordion openen en sluiten
+				function toggleAccordion(id) {
+					var x = document.getElementById(id);
+					if (x.className.indexOf("w3-show") == -1) {
+						x.className += " w3-show";
+					} else { 
+						x.className = x.className.replace(" w3-show", "");
+					}
+				}
+
     </script>
 
 </body>
