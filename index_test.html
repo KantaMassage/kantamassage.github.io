@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kanta Traditonele Thaise Massage</title>
+		<!-- description -->
+		<meta name="description" content="Traditionele Thaise massage in Nijmegen voor ontspanning en vermindering van uw pijn en stress. Informeer of maak een afspraak." />		
+		
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <!-- twitter card -->
+		<meta name="twitter:card" content="summary" />
+
+		<!-- opengraph tags -->
+		<meta property="og:url"          content="https://kantamassage/index.html" />
+        <meta property="og:type"         content="website" />		
+		<meta property="og:title"        content="Kanta Massage Nijmegen" />
+		<meta property="og:description"  content="Traditionele Thaise Massage" />
+		<meta property="og:image"        content="https://kantamassage/TitelGroot.jpg" />		
+
+		
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+				<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-khaki.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Lato", sans-serif;
+            }
+
+            body,
+            html {
+                height: 100%;
+                color: #777;
+                line-height: 1.8;
+            }
+
+            /* Create a Parallax Effect */
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-3 {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* First image (Logo. Full height) */
+            .bgimg-1 {
+                background-image: url('TitelGroot.jpg');
+                min-height: 100%;
+            }
+
+            /* Second image (Praktijk) */
+            .bgimg-2 {
+                background-image: url("Hand.jpg");
+                min-height: 400px;
+            }
+
+            /* Third image (Contact) */
+            .bgimg-3 {
+                background-image: url("Massagetafel.jpg");
+                min-height: 400px;
+            }
+
+            .w3-wide {
+                letter-spacing: 10px;
+            }
+
+            .w3-hover-opacity {
+                cursor: pointer;
+            }
+
+            /* Turn off parallax scrolling for tablets and phones */
+            @media only screen and (max-device-width: 1600px) {
+
+                .bgimg-1,
+                .bgimg-2,
+                .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+            }
+			
+			/*Mastodon icoontje (uitgecommentarieerd, vervangen door ShareOpenly)
+			.fa-mastodon{
+				height: 22px;
+				width: 20px;
+				background-image:url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB2aWV3Qm94PSIwIDAgMjMxIDI0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj4KPHBhdGggZD0ibTE2NC41MyAxODguNjJjMzEuMDA4LTMuNzAyIDU4LjAwNy0yMi44MDggNjEuNC00MC4yNjUgNS4zNDctMjcuNSA0LjkwNS02Ny4xMDkgNC45MDUtNjcuMTA5IDAtNTMuNjg1LTM1LjE3My02OS40MjEtMzUuMTczLTY5LjQyMS0xNy43MzUtOC4xNDUzLTQ4LjE4OC0xMS41NzEtNzkuODI3LTExLjgyOWgtMC43NzdjLTMxLjYzOSAwLjI1ODY3LTYyLjA3MiAzLjY4NC03OS44MDggMTEuODI5IDAgMC0zNS4xNzUgMTUuNzM2LTM1LjE3NSA2OS40MjEgMCAzLjI1NDYtMC4wMTY4MjIgNi42Nzc4LTAuMDM0MzM0IDEwLjI0MS0wLjA0ODYzNCA5Ljg5NjktMC4xMDI1OSAyMC44NzggMC4xODM2NyAzMi4zMzkgMS4yNzczIDUyLjUwMSA5LjYyNTMgMTA0LjI0IDU4LjE2NyAxMTcuMDkgMjIuMzgxIDUuOTI0IDQxLjU5NyA3LjE2NCA1Ny4wNzQgNi4zMTMgMjguMDY1LTEuNTU2IDQzLjgyLTEwLjAxNiA0My44Mi0xMC4wMTZsLTAuOTI2LTIwLjM2M3MtMjAuMDU2IDYuMzI0LTQyLjU4IDUuNTU0Yy0yMi4zMTYtMC43NjYtNDUuODc0LTIuNDA3LTQ5LjQ4NC0yOS44MDYtMC4zMzM0LTIuNDA2LTAuNS00Ljk4LTAuNS03LjY4MiAwIDAgMjEuOTA3IDUuMzU0IDQ5LjY3IDYuNjI2IDE2Ljk3NiAwLjc3OSAzMi44OTYtMC45OTQgNDkuMDY1LTIuOTI0em0yNC44MTYtMzguMjA2di02NS4wMDRjMC0xMy4yODUtMy4zODMtMjMuODQzLTEwLjE3Ni0zMS42NTMtNy4wMDgtNy44MTA2LTE2LjE4NC0xMS44MTUtMjcuNTczLTExLjgxNS0xMy4xOCAwLTIzLjE2IDUuMDY1NC0yOS43NTggMTUuMTk3bC02LjQxNiAxMC43NTMtNi40MTQtMTAuNzUzYy02LjU5OS0xMC4xMzItMTYuNTc5LTE1LjE5Ny0yOS43NTgtMTUuMTk3LTExLjM5MSAwLTIwLjU2NyA0LjAwNDEtMjcuNTczIDExLjgxNS02Ljc5NDcgNy44MTA3LTEwLjE3NyAxOC4zNjgtMTAuMTc3IDMxLjY1M3Y2NS4wMDRoMjUuNzUzdi02My4wOTNjMC0xMy4zIDUuNTk2LTIwLjA1MSAxNi43ODktMjAuMDUxIDEyLjM3NiAwIDE4LjU4IDguMDA3OSAxOC41OCAyMy44NDN2MzQuNTM1aDI1LjYwMnYtMzQuNTM1YzAtMTUuODM1IDYuMjAyLTIzLjg0MyAxOC41NzgtMjMuODQzIDExLjE5NCAwIDE2Ljc5IDYuNzUwNiAxNi43OSAyMC4wNTF2NjMuMDkzaDI1Ljc1M3oiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iYSI+CjxyZWN0IHdpZHRoPSIyMzAuODQiIGhlaWdodD0iMjQ3LjQ4IiBmaWxsPSIjZmZmIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg=="); 
+				*/
+			}
+			
+        </style>
+    </head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">Kanta</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Over</a>
+            <a href="#praktijk" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Praktijk</a>
+			<a href="#tarieven" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-euro"></i> Tarieven</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contact</a>
+            <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>-->
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">Over</a>
+            <a href="#praktijk" class="w3-bar-item w3-button" onclick="toggleFunction()">Praktijk</a>
+            <a href="#tarieven" class="w3-bar-item w3-button" onclick="toggleFunction()">Tarieven</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
+            <a href="#" class="w3-bar-item w3-button"></a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Traditionele <span
+                    class="w3-hide-small">Thaise </span> Massage</span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+			<!--
+		  <div class="w3-panel w3-theme-l4 w3-center w3-topbar w3-bottombar w3-border-khaki">
+      <p> Wij zijn gesloten van 25 januari 2024 tot en met 22 februari 2024.</p>
+			<p> Op 23 februari zijn we weer geopend.</p>
+      </div>
+     -->
+        <h3 class="w3-center"><img class="w3-image" src="favicon.png"/><br/>Kanta Massage Nijmegen</h3>
+        <p class="w3-center"><em>Traditionele Thaise Massage</em></p>
+        <p>
+		Even tijd voor uzelf maken is tegenwoordig meer noodzaak dan luxe. Een goede gezonde massage brengt u rust en kracht, zodat u alle stress van u af kunt laten glijden en met hernieuwde energie aan de slag kunt. 
+		Traditionele Thaise massage is een van de oudste geneesmethoden in de wereld. 
+		Het is erop gericht om de balans in uw lichaam en geest weer terug te brengen. 
+		Ervaar bij Kanta massage wat het u kan brengen.
+		<img src="GezondheidscentrumDanielsplein.jpg" style="width:25%; float:right" onclick="onClick(this)" class="w3-hover-opacity" alt="Het Gezondheidscentrum">
+		<h4 class="w4-left">Gewoon maar speciaal</h4>
+		Traditionele Thaise massage is uniek, en veelomvattend. Thaise massage is er al meer dan tweeduizend jaar, en wordt niet alleen toegepast voor genezing, maar juist ook om fit te blijven.
+		Het mooie is dat u bij deze massage niet hoeft te betalen voor dure medische woorden, maar voor een zeer werkzame methode die zich al die duizenden jaren bewezen heeft, en misschien juist daarom gewoon is gebleven.
+		<h4 class="w4-left">Uw wensen</h4>
+		Bij Kanta-massage kiezen we ervoor om in overleg met u de massage vorm te geven. U kunt bijvoorbeeld aangeven welke delen van uw lichaam extra aandacht behoeven. Met drukpuntmassage volgens de oude Thaise methode worden de juiste energiebanen in uw lichaam gestimuleerd, en uw lichaam en geest weer meer in balans gebracht. 
+		Misschien heeft u specifieke wensen, zoals de behandeling van een "bevroren schouder" of een stijve nek. Wij kunnen er speciale aandacht aan geven, zodat de klachten verminderen en de pijn verlicht wordt. <br/> 
+		Onze benadering is dus vooral medisch en op uw gezondheid gericht. Daar hoort ook ontspanningsmassage bij, maar erotiek past zeker niet in onze werkwijze. Wij vragen u respectvol om voor een erotische massage verder te zoeken en geen contact met ons op te nemen.
+		</p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>Pimchaya</b></p><br>
+                <img src="PimchayaPortret.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
+                    width="500" height="333">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p><br/><br/><br/>Mijn naam is Pimchaya en ik woon meer dan tien jaar in Nederland. In Thailand heb ik jarenlang gewerkt als onderwijzeres, en in Nederland heb ik vooral huishoudelijk werk en werk in de ouderenzorg gedaan. In mijn leven is dienstbaarheid voor anderen altijd erg belangrijk geweest en het geven van Thaise massage geeft mij daarom veel voldoening. Nieuwe energie en balans aan mensen geven is juist in deze snelle en haastige tijden erg belangrijk. Daarom heb ik de officiële Thaise massage opleiding gevolgd en ben ik gestart met deze massagepraktijk. </p>
+            </div>
+        </div>
+		<!-- 
+        <p class="w3-large w3-center w3-padding-16">---</p>
+        <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+        <div class="w3-light-grey"> <p0> Tarieven: </p>
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+        </div> -->
+    </div>
+
+    <!-- Second Parallax Image with praktijk Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">Praktijk</span>
+        </div>
+    </div>
+
+    <!-- Container (praktijk Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="praktijk">
+        <h3 class="w3-center">De praktijk</h3>
+		<p class="w3-center"> De massages die we aanbieden zijn:</p>
+
+        <table class="w3-table w3-responsive" >
+		<tr>
+		<td>
+        <div class="w3-container w3-card w3-cell" style="width:50%">
+		<h4 class="w3-left">Traditionele Thaise massage </h4>
+		<p  class="w3-left">Rektechnieken en massage op uw spieren en op drukpunten langs energielijnen brengen uw lichaamsenergie weer in balans.</p>
+		</div>
+		</td>
+		<td>
+		<div class="w3-container w3-card w3-cell">
+		<h4 class="w3-left">Olie ontspanningsmassage</h4>
+		<p  class="w3-left">Ontspanningsmassage waarbij de werking van de essentiele olieën tijdens de massage met deze warme olie de ontspanning van uw lichaam en geest versterken.</p>
+		</div>
+		</td>
+		</tr>
+		
+	    <tr>
+		<td>
+		<div class="w3-container w3-card w3-cell" style="width:50%">		
+		<h4 class="w3-left">Hotstone massage</h4>
+		<p class="w3-left">Met hete stenen en een massage met warme massage-olie ervaart u een totale ontspanning die diep in de spieren doordringt.</p>
+		</div>
+		</td>
+		<td>
+		<div class="w3-container w3-card w3-cell" style="width:50%">		
+		<h4 class="w3-left">Kruidenstempel massage</h4>
+		<p class="w3-left">Met een buidel Thaise kruiden wordt gedrukt op de belangrijke plekken langs lichaamsmeridianen, om de energie van lichaam en geest in balans te brengen. </p>
+		</div>
+		</td>
+		</tr>
+		
+	    <tr>
+		<td>
+		<div class="w3-container w3-card w3-cell" style="width:50%">		
+		<h4 class="w3-left">Diepe bindweefsel massage</h4>
+		<p class="w3-left">Wat hardere massage die dieper in het lichaam doordringt. Bij deze massage gaan we steeds na of de kracht waarmee de drukoefeningen uitgevoerd worden voor u passend is.</p>
+		</div>
+		</td>
+		<td>
+		<div class="w3-container w3-card w3-cell" style="width:50%">		
+		<h4 class="w3-left">Anti-migraine massage</h4>
+		<p class="w3-left">Om hoofdpijn te verlichten concentreren we ons bij deze massage op uw hoofd, nek en schouders om daar uw spieren losser en ontspannen te maken.</p>
+		</div>
+		</td>
+		</tr>
+		
+	    <tr>
+		<td>
+		<div class="w3-container w3-card w3-cell" style="width:50%">		
+<!--		<h4 class="w3-left">Duo massage</h4>
+		<p class="w3-left">Een massage naar keuze samen met uw partner of vriend(in) om samen te ontspannen. Als u hiervoor tijdig een afspraak maakt kunnen we een collega inplannen.   </p> -->
+		<h4 class="w3-left">Massage therapie</h4>
+		<p class="w3-left">Met acupressuur en reflexzonetherapie om klachten te behandelen, zoals rugpijn, een "frozen shoulder" of kramp tijdens slaap. Neem met ons contact op om te vragen of we uw klachten kunnen verlichten of verhelpen.</p> 
+
+		</div>
+		</td>
+		<td>
+		<div class="w3-container w3-card w3-cell" style="width:50%">		
+		<h4 class="w3-left">Zwangerschaps massage</h4>
+		<p class="w3-left">Ontspanningsmassage die rekening houdt met de veranderingen die zich in uw lichaam afspelen, speciaal voor u en uw kindje. </p>
+	    </div>
+		</td>
+		</tr>
+        
+		</table>
+
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="w3-row-padding w3-center">
+        <p class="w3-center"><em>Thaise massage en behaalde certificaten </em></p><br>		
+            <div class="w3-col m3">
+                <img src="Hand.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Handmassage">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="nek.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Schouder en nek massage">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="strekken.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Strekken">
+            </div>
+           <div class="w3-col m3">
+                <img src="hotstone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Hotstone">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="schouders.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Nek en schouders">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="rug.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Massage van de onderrug">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="kruiden.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Thaise kruiden">
+            </div>
+            <div class="w3-col m3">
+                <img src="sawadee.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Sawadee, Thaise groet">
+            </div>
+			
+        </div>
+		       <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="CertificateThaiseTraditioneleMassageEngels.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Certificaat Thaise Traditionele Massage">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="CertificateLymfe.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Certificaat Lymfedrainage Cursus">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="CertificateThaiMedicalMassage.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Certificaat Thai Boost Online Cursus">
+            </div>
+            
+			<div class="w3-col m3">
+                <img src="CertificatePaiParin.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="Certificaat PaiParin">
+            </div> 
+            <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>-->
+			
+        </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+
+    <div class="w3-row w3-center w3-khaki w3-padding-16" id="tarieven">
+	        <h3 class="w3-center">Tarieven vanaf 1 januari 2024</h3>
+      <dl>			
+	   <dt> Half uur: € 45,- </dt>
+	   <dt> Een uur: € 55,- </dt>
+	   <dt> Anderhalf uur:  € 80,- </dt>
+	   <dt> Twee uur: € 105,- </dt>
+		 <dt> Drie uur: € 150,- </dt>
+		 <!--<dt> <i>Vanaf 1 januari volgend jaar verhogen wij de tarieven. </i> </dt>-->
+	  </dl> 
+	  
+	 <!-- <img  src="actie.png" alt="Actie" width="300">  -->
+	 	  
+	  <h4 class="w4-center">Meerprijzen</h4>	  
+	  <dl>
+	   <dt> Hotstone Massage € 15,- </dt>	  
+	   <dt> Kruidenstempel Massage € 15,- </dt>
+	   	  Hotstone en Kruidenstempel massage <br/> hebben een minimale duur van anderhalf uur.
+	  </dl>
+    <button onclick="toggleAccordion('Cadeaubon')" class="w3-btn w3-block w3-khaki w3-center"><h3>Ook een cadeaubon is mogelijk...</h3></button>
+		<div id="Cadeaubon" class="w3-container w3-hide"> <!-- class="w3-col m3" -->
+			<h4>Cadeaubon</h4>
+			<p>Te koop in de praktijk. U kiest zelf het aantal uren en voor wie de cadeaubon bedoeld is.</p>
+      <img src="Cadeaubon.png" alt="cadeaubon"></img>
+		</div>
+
+      <!--  <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">14+</span><br>
+            Partners
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">55+</span><br>
+            Projects Done
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">89+</span><br>
+            Happy Clients
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">150+</span><br>
+            Meetings
+        </div> -->
+    </div>
+
+
+
+    <!-- Third Parallax Image with praktijk Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">Contactgegevens</h3>
+        <p class="w3-center"><em>Voor een afspraak of voor informatie aarzel niet om contact op te nemen!</em></p>
+        <!-- online afspraken-->
+        <!-- <div style="text-align: center;"><a href="https://widget.onlineafspraken.nl/consumer/booking/book/key/fffm23yvtp12-zfdz02/l/11121/ln/nl/t/8090c4/f/100e0212/o/theme:advanced,dp:classic/c/0076a4,3a6b35,111,e3b448,cbd18f,fff,0,fff/at/0/rs/0/pp/0/uac/none/output/html" target= "_blank" style="text-decoration:none;display:inline-block;background:#cbd18f;color:#ffffff;border:none;border-radius:4px;padding:10px 20px;">Reserveer nu</a></div> -->
+        <!-- einde online afspraken-->
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <a href="https://www.openstreetmap.org/node/2953089005#map=16/51.8345/5.8314"><img src="ParkerenOpStraat.png" class="w3-image w3-round w3-hover-opacity" ></a> 
+            </div>
+            <div class="w3-col m8"> <!-- w3-panel weggehaald voor uitlijning marge -->
+                <div class="w3-large w3-margin-bottom">
+                    <a href="https://www.openstreetmap.org/node/2953089005#map=16/51.8345/5.8314"> <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> Gezondheidscentrum, Danielsplein 3D, Nijmegen<br> 
+					<i class="fa fa-exclamation-circle fa-fw w3-xlarge w3-margin-right" ></i>
+<small>Let op: niet het Wijkcentrum, maar de ingang aan De la Reystraat</small> <br>
+					<i class="fa fa-wheelchair fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Rolstoel toegankelijk, lift aanwezig <br> 
+					<a href="https://www.openstreetmap.org/node/2953089005#map=16/51.8345/5.8314"> <i class="fa fa-car fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> Gratis parkeren<br>
+					<a href="https://wa.me/31681620217"> <i class="fa fa-clock-o  fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> Ma-di 9:00-21:00  wo-do 19:00-21:00 vr-zo 9:00-21:00<br>					
+                    <a href="https://wa.me/31681620217"><i class="fa fa-whatsapp fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> Op afspraak: Whatsapp of Signal: +31681620217<br>
+					<a href="mailto:kantamassage@gmail.com"><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> Email: kantamassage@gmail.com<br>
+					<!-- <a href="https://www.kvk.nl/zoeken/?source=all&q=88641147&start=0&site=kvk2014"><i class="fa fa-id-card fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> Kvk:  88641147 <br>
+					<i class="fa fa-credit-card" aria-hidden="true"></i>
+					-->
+                </div>
+				<!--
+                <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+				-->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Naar het begin</a>
+        <div class="w3-xlarge w3-section">
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkantamassage.nl"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <!--<i class="fa fa-instagram w3-hover-opacity"></i>-->
+            <!--<i class="fa fa-snapchat w3-hover-opacity"></i>-->
+	<!-- Vervangen door ShareOpenly 		
+	<a href="https://sharetomastodon.github.io/?title=Kanta Massage&url=https://kantamassage.nl" target="_blank"><i class="fa fa-mastodon w3-hover-opacity"></i></a>
+	-->
+            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fkantamassage.nl&amp;media=https%3A%2F%2Fkantamassage.nl&amp;description=Kanta%20Thaise%20Massage"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+            <a href="https://twitter.com/intent/tweet/?text=Kanta%20Thaise%20Massage&amp;url=https%3A%2F%2Fkantamassage.nl"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+            <a href="https://shareopenly.org/share/?url=https://kantamassage.nl&text=Voor een traditionele Thaise massage in Nijmegen"><i class="fa fa-share-alt w3-hover-opacity"></i></a>						
+            <!--<i class="fa fa-linkedin w3-hover-opacity"></i>-->
+   <!-- Cloudflare zet nu cross-site tracking cookies   
+	 <p class="w3-small w3-tooltip">
+	 <span class="w3-text">Deze site geeft je geen&nbsp;</span>
+	 cookies
+     <span class="w3-text">. Wil je er toch een, maak dan een afspraak, of klik op een van bovenstaande deelknoppen.</span></p>  			
+    -->
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+				
+				// Accordion openen en sluiten
+				function toggleAccordion(id) {
+					var x = document.getElementById(id);
+					if (x.className.indexOf("w3-show") == -1) {
+						x.className += " w3-show";
+					} else { 
+						x.className = x.className.replace(" w3-show", "");
+					}
+				}
+
+    </script>
+
+</body>
+<!-- Agenda-mogelijkheid SimplyBook.me-->
+<script src="http://widget.simplybook.it/v2/widget/widget.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var widget = new SimplybookWidget({"widget_type":"button","url":"https:\/\/kantamassage.simplybook.it","theme":"classic","theme_settings":{"timeline_hide_unavailable":"1","hide_past_days":"0","timeline_show_end_time":"0","timeline_modern_display":"as_slots","sb_base_color":"#cbd18f","display_item_mode":"block","body_bg_color":"#ffffff","sb_review_image":"","btn_color_1":"#e3b448","sb_company_label_color":"#543636","hide_img_mode":"0","sb_busy":"#3a6b35","sb_available":"#d6ebff"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]},"button_title":"Reserveer nu","button_background_color":"#cbd18f","button_text_color":"#ffffff","button_position":"right","button_position_offset":"55%"});
+</script>
+</html>
